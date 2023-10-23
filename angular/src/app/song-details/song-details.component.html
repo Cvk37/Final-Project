@@ -1,0 +1,23 @@
+<h2><strong>{{ songName }}</strong></h2>
+<table>
+    <tr>
+      <td><strong>Artist:</strong></td>
+      <td><a [routerLink]="['/artist', songDetails?.artist]">{{ songDetails?.artist }}</a></td>
+    </tr>
+    <tr>
+      <td><strong>Album:</strong></td>
+      <td>{{ songDetails?.album }}</td>
+    </tr>
+    <tr>
+      <td><strong>Genre:</strong></td>
+      <td>{{ songDetails?.genre }}</td>
+    </tr>
+    <tr>
+        <td><strong>Year:</strong></td>
+        <td>{{ songDetails?.year }}</td>
+      </tr>
+  </table>
+  <button (click)="navigateToHomePage()">Back to My Playlist</button>
+  <button (click)="navigateToUpdateSong()">Update Song Details</button>
+  <button (click)="deleteSong()">Delete Song</button>
+  

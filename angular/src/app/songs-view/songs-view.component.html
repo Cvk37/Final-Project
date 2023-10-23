@@ -1,0 +1,7 @@
+<h1>My Playlist</h1>
+<ul>
+    <li *ngFor="let song of songs">
+        <a [routerLink]="['songs',song._id]">{{ song.title }} - {{ song.artist }}</a>
+    </li>
+    <button (click)="navigateToAddSong()">Add Song</button>
+  </ul>
